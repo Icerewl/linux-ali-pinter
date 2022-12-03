@@ -1,6 +1,5 @@
 #nefiw79541@imdutex.com
 #nefiw79541
-from distutils.log import error
 import time
 from Admitad_link_converter import link_convert, file_opener
 import requests
