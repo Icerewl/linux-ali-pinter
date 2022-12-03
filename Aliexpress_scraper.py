@@ -65,8 +65,9 @@ def Aliexpress_scraper(item_listas,counter_for_item,counter_for_page):
             #Url_list.append()
             
             img_Url_list.append(data["mods"]["itemList"]["content"][i]["image"]["imgUrl"].replace("220x220","Q90"))
-            
-            display_Title_list.append(data["mods"]["itemList"]["content"][i]["title"]["displayTitle"])
+            #print(data["mods"])
+            #display_Title_list.append(data["mods"]["itemList"]["content"][i]["title"]["displayTitle"])
+            display_Title_list.append(data["mods"]["itemList"]["content"][i]["image"]["imgUrl"].split("/")[-1][:-18].replace("-"," "))
             item_Url_list.append("https://www.aliexpress.com/item/" +data["mods"]["itemList"]["content"][i]["productId"]+ ".html")
             #print(data["mods"]["itemList"]["content"][i]["image"]["imgUrl"])
             #print(data["mods"]["itemList"]["content"][i]["title"]["displayTitle"])

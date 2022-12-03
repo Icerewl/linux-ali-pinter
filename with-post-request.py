@@ -79,15 +79,16 @@ def main_function(counter_for_item,counter_for_page,error_counter):
             else:
                 send_status_to_bot("DEVICE 1 " +str(i)+". Post Created Succesfully" + "  Product Display Title: "+ displays[i][0:15])
                 print(str(i)+". Post Created Succesfully" + "  Product Display Title: "+ displays[i][0:30])
-        
+            time.sleep(10300) 
                   
         except Exception as e:
             print(str(i)+". posting failed" + "Reason: "+ str(e))
             send_status_to_bot("DEVICE "+str(i)+". Posting Failed" + "Reason:" + str(e))
             #time.sleep(300)
             error_counter += 1
+            time.sleep(10300) 
             pass
-    time.sleep(3600) 
+            
             
     return counter_for_item,counter_for_page,error_counter
 if __name__ == "__main__":
